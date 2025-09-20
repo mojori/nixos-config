@@ -14,8 +14,12 @@
     libreoffice
 
     # Codding stuff
+    clang-tools
     gnumake
     gcc
+    SDL2
+    SDL2.dev
+    pkg-config
     python
     (python3.withPackages (ps: with ps; [
       requests

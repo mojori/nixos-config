@@ -2,7 +2,7 @@
   imports = [
     ./bootloader.nix
     ./bluetooth.nix
-    ./hyprland.nix
-
+   # ./hyprland.nix
+    ./gnome.nix
   ];
 }

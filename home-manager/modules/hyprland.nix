@@ -23,8 +23,8 @@
       };
 
       input = {
-	kb_layout = "us";
-	kb_options = "grp:caps_toggle";
+	kb_layout  = "us,ru"; 
+	kb_options = "grp:win_space_toggle";
 
 	follow_mouse = 1;
 
@@ -51,8 +51,8 @@
        decoration = {
 	rounding = 10;
 
-	active_opacity = 0.85;
-	inactive_opacity = 0.7;
+	active_opacity = 0.7;
+	inactive_opacity = 0.5;
 	fullscreen_opacity = 1.0;
 
 	blur = {
@@ -132,6 +132,8 @@
 	"$mainMod, T, exec, kitty"
 	"$mainMod, Q, killactive,"
 	"$mainMod, B, exec, chromium"
+        "$mainMod, O, exec, libreoffice"
+	"$mainMod, C, exec, ayugram-desktop"
 
 	# Move focus with mainMod + arrow keys
         "$mainMod, left,  movefocus, l"
