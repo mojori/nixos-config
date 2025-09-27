@@ -4,6 +4,6 @@
     ./bluetooth.nix
    # ./hyprland.nix
    # ./gnome.nix
-    ./plasma6.nix
+    ./plasma5.nix
   ];
 }
