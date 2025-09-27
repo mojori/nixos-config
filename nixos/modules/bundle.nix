@@ -3,6 +3,7 @@
     ./bootloader.nix
     ./bluetooth.nix
    # ./hyprland.nix
-    ./gnome.nix
+   # ./gnome.nix
+    ./plasma6.nix
   ];
 }
