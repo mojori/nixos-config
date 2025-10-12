@@ -25,13 +25,13 @@
       
       # nixos - system hostname
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-	  specialArgs = {
-	    unstable = import nixpkgs-unstable {
-      	inherit system;
-	      config.allowUnfree = true;
-	    };
+	specialArgs = {
+	  unstable = import nixpkgs-unstable {
+    	    inherit system;
+	    config.allowUnfree = true;
+	  };
 	  inherit inputs system;
-    };
+        };
 	modules = [
 	  ./nixos/configuration.nix
 	  inputs.nixvim.nixosModules.nixvim
