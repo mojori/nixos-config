@@ -90,11 +90,11 @@
     swappy
 
     # Other
+    amnezia-vpn
     home-manager
     libsForQt5.qtstyleplugin-kvantum
     libsForQt5.qt5ct
     papirus-nord
-    ventoy
   ];
   
   fonts.packages = with pkgs; [
@@ -108,3 +108,4 @@
     nerd-fonts.symbols-only 
   ];
 }
+
