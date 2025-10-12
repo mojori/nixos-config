@@ -12,6 +12,7 @@
     rofi
     mpv
     libreoffice
+    discord 
 
     # Codding stuff
     clang-tools
@@ -29,7 +30,7 @@
     # CLI utils
     bat
     vim
-    #code
+    vscode
     neofetch
     file
     tree 
@@ -93,6 +94,7 @@
     libsForQt5.qtstyleplugin-kvantum
     libsForQt5.qt5ct
     papirus-nord
+    ventoy
   ];
   
   fonts.packages = with pkgs; [

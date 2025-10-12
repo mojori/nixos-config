@@ -2,8 +2,12 @@
   imports = [
     ./bootloader.nix
     ./bluetooth.nix
-   # ./hyprland.nix
+    ./hyprland.nix
+    ./amnezia.nix
+    ./network-manager.nix
+    ./user.nix
+    ./audio.nix
    # ./gnome.nix
-    ./plasma5.nix
+
   ];
 }
