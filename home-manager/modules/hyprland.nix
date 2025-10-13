@@ -122,7 +122,7 @@
 
       exec-once = [
         "swww-daemon"
-        "swww img ~/Downloads/wallpapers.png"
+        "swww img ~/nix/wallpapers/wallpaper.png"
         "waybar"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
