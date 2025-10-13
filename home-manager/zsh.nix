@@ -1,4 +1,4 @@
-{ config, ... }: {
+{ config, pkgs, ... }: {
     programs.zsh = {
         enable = true;
         enableCompletion = true;
@@ -23,8 +23,24 @@
 
         oh-my-zsh = {
           enable = true;
-          plugins = [ "git" "sudo" ];
-          theme = "agnoster"; # blinks is also really nice
+          plugins = [ "git" "sudo" "python"];2
         };
+
+        plugins = [
+          {
+            name = "powerlevel10k";
+            src = "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k";
+            file = "powerlevel10k.zsh-theme";
+          }
+        ];
+
+        initExtra = ''
+          [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+        '';
     };
+
+    home.packages = with pkgs; [
+    zsh-powerlevel10k
+    powerline-fonts
+  ];
 }
