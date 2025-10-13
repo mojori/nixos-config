@@ -19,7 +19,8 @@
             scrollback_lines = 10000;
             wheel_scroll_multiplier = 5.0;
             
-            background = "#1d2021";
+            window_margin_width = 5;
+            background = "#1a1b20";
 
             extraConfig = ''
               enable_audio_bell no          

@@ -131,13 +131,12 @@
 	"$mainMod, T, exec, kitty"
 	"$mainMod, Q, killactive,"
 	"$mainMod, B, exec, chromium"
-  "$mainMod, O, exec, libreoffice"
 	"$mainMod, C, exec, ayugram-desktop"
   "$mainMod, V, exec, AmneziaVPN"
   "$mainMod, D, exec, wofi --show drun"
   "$mainMod, E, exec, dolphin"
 
-	# Move focus with mainMod + arrow keys
+  # Move focus with mainMod + arrow keys
         "$mainMod, left,  movefocus, l"
         "$mainMod, right, movefocus, r"
         "$mainMod, up,    movefocus, u"
