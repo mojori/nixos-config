@@ -39,9 +39,9 @@
         gaps_in = 5;
         gaps_out = 15;
         border_size = 2;
-        "col.active_border" = "rgba(9e67ceb0) rgba(ce679cb0) 45deg";
-        "col.inactive_border" = "rgba(696969aa)";
-
+        "col.active_border" = "rgba(7c818cb0) rgba(5e5f66b0) 45deg";
+        "col.inactive_border" = "rgba(383c4aaa)";
+`
         layout = "dwindle";
 
 

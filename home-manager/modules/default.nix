@@ -1,12 +1,9 @@
 {
   imports = [
-    ./hyprland.nix
+    ./wm
     ./git.nix
     ./qt.nix
     ./htop.nix
     ./cursor.nix
-    ./waybar.nix
-    ./wofi.nix
-    ./mako.nix
   ];
 }
