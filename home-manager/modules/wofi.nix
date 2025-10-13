@@ -22,7 +22,7 @@
         margin: 0px;
         border: 2px solid #458588;
         border-radius: 8px;
-        background-color: #1d2021;
+        background-color: #383c4a;
       }
       
       #input {

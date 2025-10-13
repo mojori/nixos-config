@@ -7,9 +7,9 @@
         position = "top";
         margin = "9 13 -10 18";
 
-        modules-left = ["hyprland/workspaces" "hyprland/language" "keyboard-state" "hyprland/submap"];
-        modules-center = ["clock" "custom/weather"];
-        modules-right = ["pulseaudio" "custom/mem" "cpu" "backlight" "battery" "tray"];
+        modules-left = ["hyprland/workspaces" "hyprland/language"];
+        modules-center = ["mpris" "clock" "custom/notifications"];
+        modules-right = ["pulseaudio" "backlight" "network" "battery" "tray" "custom/powermenu"];
 
         "hyprland/workspaces" = {
           disable-scroll = true;
@@ -18,32 +18,20 @@
     "hyprland/language" = {
         format-en = "US";
         format-ru = "RU";
-	      min-length = 5;
+	      min-length = 3;
 	      tooltip = false;
-    };
-
-    "keyboard-state" = {
-        #numlock = true;
-        capslock = true;
-        format = "{icon} ";
-        format-icons = {
-            locked = " ";
-            unlocked = "";
-        };
     };
 
     "clock" = {
         # timezone = "America/New_York";
         tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
-        format = "{:%a; %d %b, %I:%M %p}";
+        format = "{:%a, %d %b %I:%M %p}";
     };
 
-    "custom/weather" = {
-        format = "{}";
-        tooltip = true;
-        interval = 1800;
-        exec = "$HOME/.config/waybar/scripts/wttr.py";
-        return-type = "json";
+    "custom/powermenu" = {
+        format = "⏻";
+        on-click = "wlogout --protocol layer-shell";
+        tooltip = "Power menu";
     };
 
     "pulseaudio" = {
@@ -68,27 +56,17 @@
         min-length = 13;
     };
 
-    "custom/mem" = {
-        format = "{} ";
-        interval = 3;
-        exec = "free -h | awk '/Mem:/{printf $3}'";
-        tooltip = false;
-    };
-
-    "cpu" = {
-      interval = 2;
-      format = "{usage}% ";
-      min-length = 6;
-    };
-
-    "temperature" = {
-        # thermal-zone = 2;
-        # hwmon-path = "/sys/class/hwmon/hwmon2/temp1_input";
-        critical-threshold = 80;
-        # format-critical = "{temperatureC}°C {icon}";
-        format = "{temperatureC}°C {icon}";
-        format-icons = ["" "" "" "" ""];
-        tooltip = false;
+    "network" = {
+      format-wifi = " {essid}";
+      format-ethernet = " Ethernet";
+      format-disconnected = " Offline";
+      tooltip-format = "
+        {ifname}
+        : {bandwidthDownBytes}
+        : {bandwidthUpBytes}
+        IP: {ipaddr}
+      ";
+      on-click = "nm-connection-editor";
     };
 
     "backlight" = {
@@ -133,7 +111,6 @@
 window#waybar {
     background: transparent;
 }
-
 window#waybar.hidden {
     opacity: 0.2;
 }
@@ -144,7 +121,6 @@ window#waybar.hidden {
     transition: none;
     background: #383c4a;
 }
-
 #workspaces button {
     transition: none;
     color: #7c818c;
@@ -152,10 +128,33 @@ window#waybar.hidden {
     padding: 5px;
     font-size: 18px;
 }
-
 #workspaces button.persistent {
     color: #7c818c;
     font-size: 12px;
+}
+
+#custom-powermenu {
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    color: #ffffff;
+    background: #383c4a;
+    transition: all 0.3s ease;
+}
+#custom-powermenu:hover {
+    padding-left: 16px;
+    padding-right: 16px;
+    background: #f53c3c;  
+    color: #ffffff;
+}
+
+#network {
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    margin-right: 8px;
+    background: #383c4a;  
+    color: #ffffff;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
@@ -167,7 +166,6 @@ window#waybar.hidden {
     color: #383c4a;
     background: #7c818c;
 }
-
 #workspaces button.active {
     background: #4e5263;
     color: white;
@@ -175,18 +173,9 @@ window#waybar.hidden {
 }
 
 #language {
-    padding-left: 16px;
+    padding-left: 8px;
     padding-right: 8px;
-    border-radius: 10px 0px 0px 10px;
-    transition: none;
-    color: #ffffff;
-    background: #383c4a;
-}
-
-#keyboard-state {
-    margin-right: 8px;
-    padding-right: 16px;
-    border-radius: 0px 10px 10px 0px;
+    border-radius: 10px 10px 10px 10px;
     transition: none;
     color: #ffffff;
     background: #383c4a;
@@ -222,17 +211,11 @@ window#waybar.hidden {
 #clock {
     padding-left: 16px;
     padding-right: 16px;
-    border-radius: 10px 0px 0px 10px;
-    transition: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
     color: #ffffff;
     background: #383c4a;
-}
-
-#custom-weather {
-    padding-right: 16px;
-    border-radius: 0px 10px 10px 0px;
-    transition: none;
-    color: #ffffff;
+    margin-right: 6px;
     background: #383c4a;
 }
 
@@ -245,44 +228,9 @@ window#waybar.hidden {
     color: #ffffff;
     background: #383c4a;
 }
-
 #pulseaudio.muted {
     background-color: #90b1b1;
     color: #2a5c45;
-}
-
-#custom-mem {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: #ffffff;
-    background: #383c4a;
-}
-
-#cpu {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: #ffffff;
-    background: #383c4a;
-}
-
-#temperature {
-    margin-right: 8px;
-    padding-left: 16px;
-    padding-right: 16px;
-    border-radius: 10px;
-    transition: none;
-    color: #ffffff;
-    background: #383c4a;
-}
-
-#temperature.critical {
-    background-color: #eb4d4b;
 }
 
 #backlight {
@@ -304,17 +252,14 @@ window#waybar.hidden {
     color: #ffffff;
     background: #383c4a;
 }
-
 #battery.charging {
     color: #ffffff;
     background-color: #26A65B;
 }
-
 #battery.warning:not(.charging) {
     background-color: #ffbe61;
     color: black;
 }
-
 #battery.critical:not(.charging) {
     background-color: #f53c3c;
     color: #ffffff;
@@ -325,11 +270,14 @@ window#waybar.hidden {
     animation-direction: alternate;
 }
 
+
+
 #tray {
     padding-left: 16px;
     padding-right: 16px;
     border-radius: 10px;
     transition: none;
+    margin-right: 8px;
     color: #ffffff;
     background: #383c4a;
 }

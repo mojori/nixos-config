@@ -51,8 +51,8 @@
        decoration = {
 	rounding = 10;
 
-	active_opacity = 0.7;
-	inactive_opacity = 0.5;
+	active_opacity = 0.85;
+	inactive_opacity = 0.6;
 	fullscreen_opacity = 1.0;
 
 	blur = {
@@ -132,8 +132,11 @@
 	"$mainMod, T, exec, kitty"
 	"$mainMod, Q, killactive,"
 	"$mainMod, B, exec, chromium"
-        "$mainMod, O, exec, libreoffice"
+  "$mainMod, O, exec, libreoffice"
 	"$mainMod, C, exec, ayugram-desktop"
+  "$mainMod, V, exec, AmneziaVPN"
+  "$mainMod, D, exec, wofi --show drun"
+  "$mainMod, E, exec, dolphin"
 
 	# Move focus with mainMod + arrow keys
         "$mainMod, left,  movefocus, l"

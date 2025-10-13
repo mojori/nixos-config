@@ -10,6 +10,8 @@
     ayugram-desktop 
     kitty
     rofi
+    wofi
+    kdePackages.dolphin
     mpv
     libreoffice
     discord 
