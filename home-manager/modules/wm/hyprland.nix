@@ -41,7 +41,6 @@
         border_size = 2;
         "col.active_border" = "rgba(7c818cb0) rgba(5e5f66b0) 45deg";
         "col.inactive_border" = "rgba(383c4aaa)";
-`
         layout = "dwindle";
 
 
