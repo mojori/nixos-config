@@ -117,7 +117,6 @@
       windowrulev2 = [
         "float, class:^(imv)$"
         "float, class:^(mpv)$"
-        "move center, class:^(mpv)$"
       ];
 
       exec-once = [
@@ -136,6 +135,7 @@
   "$mainMod, V, exec, AmneziaVPN"
   "$mainMod, D, exec, wofi --show drun"
   "$mainMod, E, exec, dolphin"
+  "$mainMod, W, togglefloating"
 
   # Full screen
     "SUPER, PRINT, exec, grim ~/Pictures/full-$(date +%s).png && wl-copy < ~/Pictures/full-$(date +%s).png"
