@@ -10,7 +10,7 @@
 
             #fonts 
             font_family = "JetBrains Mono Nerd Font";
-            font_size = 14;
+            font_size = 12;
             bold_font = "auto";
             italic_font = "auto";
             bold_italic_font = "auto";
@@ -25,6 +25,6 @@
               enable_audio_bell no          
               visual_bell_duration 0.0
             '';
-        }
-    }
+        };
+    };
 }
