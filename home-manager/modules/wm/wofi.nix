@@ -9,47 +9,65 @@
       height = 500;
       location = "center";
       show = "drun";
-      prompt = " ";
-      insensitve = true;
+      prompt = "";
+      insensitive = true;
+      show_images = true;
+      image_size = 24;
     };
     
     style = ''
       * {
-        font: "FiraCode Nerd Font 12";
+        font-family: "JetBrains Mono";
+        font-size: 18px;
       }
       
       window {
         margin: 0px;
-        border: 2px solid #458588;
-        border-radius: 8px;
-        background-color: #383c4a;
+        border: 2px solid #7c818c;
+        border-radius: 10px;
+        background-color: #17181c;
       }
       
       #input {
         margin: 10px;
         padding: 10px;
-        border: none;
-        border-radius: 4px;
-        color: #ebdbb2;
-        background-color: #3c3836;
+        border: 2px solid #7c818c;
+        border-radius: 10px;
+        color: #7c818c;
+        background-color: #17181c;
       }
       
       #inner-box {
-        margin: 0px 10px 10px 10px;
+        margin: 10px;
         border: none;
+        border-radius: 10px;
         background-color: transparent;
       }
       
       #entry {
-        padding: 8px;
+        margin: 10px;
+        padding: 10px;
         border: none;
-        border-radius: 4px;
-        color: #ebdbb2;
+        border-radius: 10px;
+        color: #7c818c;
         background-color: transparent;
       }
       
       #entry:selected {
-        background-color: #458588;
+        background-color: #383c4a;
+      }
+
+      #scroll {
+        margin: 5px;
+        border: none;
+        border-radius: 12px;
+        background-color: #1a1b20;
+      }
+
+      #scroll:hover {
+        border: none;
+        border-radius: 12px;
+        background-color: #1a1b20;
       }
     '';
   };
