@@ -136,6 +136,12 @@
   "$mainMod, D, exec, wofi --show drun"
   "$mainMod, E, exec, dolphin"
 
+  # Full screen
+    "SUPER, PRINT, exec, grim ~/Pictures/full-$(date +%s).png && wl-copy < ~/Pictures/full-$(date +%s).png"
+    
+  # Area (с Ctrl)
+    "CTRL, PRINT, exec, grim -g \"$(slurp)\" ~/Pictures/area-$(date +%s).png && wl-copy < ~/Pictures/area-$(date +%s).png"
+
   # Move focus with mainMod + arrow keys
         "$mainMod, left,  movefocus, l"
         "$mainMod, right, movefocus, r"

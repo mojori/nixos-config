@@ -6,6 +6,5 @@
     ./htop.nix
     ./cursor.nix
     ./kitty.nix
-    ./screenshots.nix
   ];
 }
