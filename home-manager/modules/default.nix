@@ -7,5 +7,6 @@
     ./cursor.nix
     ./waybar.nix
     ./wofi.nix
+    ./mako.nix
   ];
 }
