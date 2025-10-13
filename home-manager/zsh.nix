@@ -23,7 +23,7 @@
 
         oh-my-zsh = {
           enable = true;
-          plugins = [ "git" "sudo" "python"];2
+          plugins = [ "git" "sudo" "python"];
         };
 
         plugins = [

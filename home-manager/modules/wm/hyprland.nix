@@ -114,10 +114,11 @@
         disable_hyprland_logo = true;
       };	
 
-     # windowrule = [
-     #   "float, ^(imv)$"
-     #   "float, ^(mpv)$"
-     # ];
+      windowrulev2 = [
+        "float, class:^(imv)$"
+        "float, class:^(mpv)$"
+        "move center, class:^(mpv)$"
+      ];
 
       exec-once = [
         "swww-daemon"
