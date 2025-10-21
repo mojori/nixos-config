@@ -6,7 +6,6 @@
 
     users.mojori = {
       isNormalUser = true;
-      description = "Katharyn Etienne";
       extraGroups = [ "networkmanager" "wheel" "input" "plugdev" "audio" ];
       packages = with pkgs; [];
     };
