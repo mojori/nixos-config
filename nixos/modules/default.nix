@@ -6,7 +6,7 @@
     ./network-manager.nix
     ./user.nix
     ./audio.nix
-   # ./gnome.nix
     ./amnezia.nix
+    ./firefox.nix
   ];
 }

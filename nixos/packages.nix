@@ -56,7 +56,7 @@
     lazygit
     bluez
     bluez-tools
-    zsh-powerlevel10k
+    # zsh-powerlevel10k
 
 
     # GUI utils

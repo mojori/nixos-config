@@ -5,7 +5,7 @@
   imports =
     [
       ./hardware-configuration.nix
-      ./modules/bundle.nix
+      ./modules
       ./packages.nix
 
     ];	
