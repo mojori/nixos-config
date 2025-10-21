@@ -2,7 +2,7 @@
 
  Installation:
 ```bash
-git clone https://github.com/katharye/nixos-config
+git clone https://github.com/mojori/nixos-config
 mv nixos-config $HOME/nix # Config is supposed to be in the ~/nix directory
 cd $HOME/nix
 sudo nixos-rebuild switch --flake .

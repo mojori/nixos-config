@@ -4,7 +4,7 @@
   users = {
     defaultUserShell = pkgs.zsh;
 
-    users.katharye = {
+    users.mojori = {
       isNormalUser = true;
       description = "Katharyn Etienne";
       extraGroups = [ "networkmanager" "wheel" "input" "plugdev" "audio" ];
@@ -13,5 +13,5 @@
   };
 
   # Enable automatic login for the user.
-  services.getty.autologinUser = "katharye";
+  services.getty.autologinUser = "mojori";
 }

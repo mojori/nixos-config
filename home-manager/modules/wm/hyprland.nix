@@ -6,7 +6,7 @@
     settings = {
       "$mainMod" = "SUPER";
 
-      monitor = ",1920x1080@60,auto,1";
+      monitor = ",auto,auto,1";
 
       env = [
 	"XDG_CURRENT_DESKTOP=Hyprland"
@@ -50,8 +50,8 @@
        decoration = {
 	rounding = 10;
 
-	active_opacity = 0.85;
-	inactive_opacity = 0.6;
+	active_opacity = 1.0;
+	inactive_opacity = 1.0;
 	fullscreen_opacity = 1.0;
 
 	blur = {

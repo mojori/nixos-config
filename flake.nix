@@ -38,7 +38,7 @@
 	];
       };
 
-      homeConfigurations.katharye = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations.mojori = home-manager.lib.homeManagerConfiguration {
 	pkgs = nixpkgs.legacyPackages.${system};
 	modules = [ ./home-manager/home.nix];
       };

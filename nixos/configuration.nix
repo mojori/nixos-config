@@ -14,7 +14,7 @@
   
   ################################################################ 
   #programs.home-manager.enable = true;                          #
-  #home-manager.users.katharye = import ../home-manager/home.nix;#
+  #home-manager.users.mojori = import ../home-manager/home.nix;#
   ################################################################
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
