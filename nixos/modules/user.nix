@@ -1,8 +1,8 @@
 { pkgs, ... }: {
-  programs.zsh.enable = true;
+  # programs.zsh.enable = true;
 
   users = {
-    defaultUserShell = pkgs.zsh;
+    defaultUserShell = pkgs.bash;
 
     users.mojori = {
       isNormalUser = true;
