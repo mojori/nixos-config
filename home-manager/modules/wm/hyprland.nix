@@ -128,7 +128,7 @@
       ];
 
       bind = [
-	"$mainMod, T, exec, kitty"
+	"$mainMod, ENTER, exec, kitty"
 	"$mainMod, Q, killactive,"
 	"$mainMod, B, exec, chromium"
 	"$mainMod, C, exec, ayugram-desktop"

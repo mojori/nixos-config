@@ -8,5 +8,6 @@
     ./audio.nix
     ./amnezia.nix
     ./firefox.nix
+    ./steam.nix
   ];
 }
