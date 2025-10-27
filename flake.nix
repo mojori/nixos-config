@@ -25,17 +25,19 @@
       
       # nixos - system hostname
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-	specialArgs = {
-	  unstable = import nixpkgs-unstable {
-    	    inherit system;
-	    config.allowUnfree = true;
-	  };
-	  inherit inputs system;
-        };
-	modules = [
-	  ./nixos/configuration.nix
-	  inputs.nixvim.nixosModules.nixvim
-	];
+        specialArgs = {
+          unstable = import nixpkgs-unstable {
+            inherit system;
+            config.allowUnfree = true;
+          };
+          inherit inputs system;
+          colors = import ./home-manager/colors.nix;
+          };
+        modules = [
+          ./nixos/configuration.nix
+          ./home-manager/wm/kitty.nix
+          inputs.nixvim.nixosModules.nixvim
+        ];
       };
 
       homeConfigurations.mojori = home-manager.lib.homeManagerConfiguration {

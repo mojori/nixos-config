@@ -121,14 +121,14 @@
 
       exec-once = [
         "swww-daemon"
-        "swww img ~/nix/wallpapers/wallpaper.png"
+        "swww img ~/nix/wallpapers/space.png"
         "waybar"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
       ];
 
       bind = [
-	"$mainMod, ENTER, exec, kitty"
+	"$mainMod, Return, exec, kitty"
 	"$mainMod, Q, killactive,"
 	"$mainMod, B, exec, chromium"
 	"$mainMod, C, exec, ayugram-desktop"
@@ -173,7 +173,7 @@
         "$mainMod, 9, workspace, 9"
         "$mainMod, 0, workspace, 10"
 
-        # Move active window to a workspace with mainMod + SHIFT + [0-9]
+        # Move active window to a worzkspace with mainMod + SHIFT + [0-9]
         "$mainMod SHIFT, 1, movetoworkspacesilent, 1"
         "$mainMod SHIFT, 2, movetoworkspacesilent, 2"
         "$mainMod SHIFT, 3, movetoworkspacesilent, 3"
